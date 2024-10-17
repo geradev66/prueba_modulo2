@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-animation: body 2s linear infinite alternate both;
+    animation: body 2s linear infinite alternate both;
+}
+nav{
+    background-color: rgb(8, 8, 8);
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+
+nav span{
+    display: none;
+}
+
+nav i {
+    font-size: 30px;
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 2em;
+}
+
+
+.card{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    gap: 1em;
+    background-color: black;
+    color: white;
+
+}
+.card img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card button{
+    background: rgb(0,108,255);
+    background: linear-gradient(90deg, rgba(0,108,255,1) 0%, rgba(244,0,255,1) 100%);
+    border: 0px;
+    padding: 1em;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 1em;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.redes{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+
+@-webkit-keyframes body {
+    0% {
+      background: #19dcea;
+    }
+    100% {
+      background: #b22cff;
+    }
+  }
+  @keyframes body {
+    0% {
+      background: #19dcea;
+    }
+    100% {
+      background: #b22cff;
+    }
+  }
+
+
+
+  @media (width >= 750px) {
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    
+  }
+
+
+  @media (width >= 1024px) {
+
+    body{
+        display: grid;
+        grid-template-areas: 
+        "nav nav main "
+        "footer footer footer"
+        ;
+    }
+
+    nav{
+        grid-area: nav;
+        margin-right: 1em;
+    }
+
+    main{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+    nav .fa-bars{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2em
+    }
+    nav span{
+        display: flex;
+    }
+
+    .card img:hover{
+        cursor: pointer;
+            -webkit-animation: escalar 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: escalar 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+
+    }
+
+
+    @-webkit-keyframes escalar {
+        0% {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
+      @keyframes escalar{
+        0% {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
+
+      
+
